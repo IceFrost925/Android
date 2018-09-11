@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_info_maintain"
+        app:showAsAction="never"
+        android:orderInCategory="1"
+        android:title="个人信息维护" />
+    <item
+        android:id="@+id/item_setting"
+        app:showAsAction="never"
+        android:orderInCategory="1"
+        android:title="设置" />
+    <item
+        android:id="@+id/item_questionnaire"
+        app:showAsAction="never"
+        android:orderInCategory="1"
+        android:title="问卷调查" />
+    <item
+        android:id="@+id/item_about"
+        app:showAsAction="never"
+        android:orderInCategory="1"
+        android:title="关于" />
+    <item
+        android:id="@+id/item_help"
+        app:showAsAction="never"
+        android:orderInCategory="1"
+        android:title="帮助" />
+
+</menu>

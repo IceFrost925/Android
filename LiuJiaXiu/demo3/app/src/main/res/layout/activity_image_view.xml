@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageViewActivity">
+
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#ff9933"
+        android:scaleType="fitXY"
+        android:src="@drawable/image_view"/>
+
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#ff9933"
+        android:layout_below="@id/iv_1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/image_view"/>
+    <ImageView
+        android:id="@+id/iv_3"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#ff9933"
+        android:layout_below="@id/iv_2"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_view"/>
+<!--加载网络图片-->
+    <ImageView
+        android:id="@+id/iv_4"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#ff9933"
+        android:layout_below="@id/iv_3"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"/>
+</RelativeLayout>

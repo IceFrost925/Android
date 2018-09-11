@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">demo3</string>
+    <string name="action_settings">Settings</string>
+    <string name="tv_test1">这就是个测试</string>
+</resources>
