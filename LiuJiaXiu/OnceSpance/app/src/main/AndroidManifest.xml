@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".OnceInfoActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".TouchActivity"></activity>
+        <activity android:name=".TouchActivity" />
+        <activity android:name=".DialogActivity"></activity>
     </application>
 
 </manifest>

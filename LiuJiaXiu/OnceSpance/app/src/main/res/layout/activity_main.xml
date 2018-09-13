@@ -67,4 +67,14 @@
         android:textColor="#fff"
         android:background="@drawable/btn_login"
         android:text="ImageViewActivity"/>
+
+    <Button
+        android:id="@+id/btn_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:background="@drawable/btn_login"
+        android:text="DialogView"/>
 </LinearLayout>

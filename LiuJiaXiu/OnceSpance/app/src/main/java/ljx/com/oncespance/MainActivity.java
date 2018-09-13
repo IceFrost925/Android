@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLogin,btnExit,btnImage;
+    private Button btnLogin,btnExit,btnImage,btnDialog;
     private EditText username;
     private EditText password;
 
@@ -83,5 +83,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnDialog = findViewById(R.id.btn_dialog);
+        btnDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,DialogActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
