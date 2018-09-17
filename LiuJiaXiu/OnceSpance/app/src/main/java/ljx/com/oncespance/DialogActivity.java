@@ -1,21 +1,25 @@
 package ljx.com.oncespance;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class DialogActivity extends AppCompatActivity {
 
-    private Button btnComm,btnMore,btnList,btnRadio,btnChecked,btnProgress2,btnProgress,btnCustomer;
+    private Button btnComm,btnMore,btnList,btnRadio,btnChecked,btnProgress2,btnProgress,btnCustomer,btnDateDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +85,14 @@ public class DialogActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 CustomDialog();
+            }
+        });
+
+        btnDateDialog = findViewById(R.id.btn_date);
+        btnDateDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DateDialog();
             }
         });
     }
@@ -186,7 +198,7 @@ public class DialogActivity extends AppCompatActivity {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(DialogActivity.this,"点击了确定按钮",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DialogActivity.this,items[which],Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
                     }
                 }).create();
@@ -276,5 +288,24 @@ public class DialogActivity extends AppCompatActivity {
         });
         customerDialog.create();
         customerDialog.show();
+    }
+
+    private void DateDialog(){
+        Calendar calendar = Calendar.getInstance();
+        final int year = calendar.get(Calendar.YEAR);
+        final int month = calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
+        DatePickerDialog datePickerDialog = new DatePickerDialog(DialogActivity.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                Toast.makeText(DialogActivity.this,"选择了"+year+"年"+(month+1)+"月"+dayOfMonth+"日",Toast.LENGTH_SHORT).show();
+            }
+        },year,month,day);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            datePickerDialog.create();
+        }
+        datePickerDialog.show();
+
     }
 }

@@ -19,7 +19,12 @@
         <activity android:name=".OnceInfoActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".TouchActivity" />
-        <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".DialogActivity" />
+        <activity
+            android:name=".ToolbarActivity"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".CalculatorActivity" />
+        <activity android:name=".Calculator2Activity"></activity>
     </application>
 
 </manifest>

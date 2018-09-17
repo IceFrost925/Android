@@ -76,5 +76,26 @@
         android:textSize="20sp"
         android:textColor="#fff"
         android:background="@drawable/btn_login"
+        android:textAllCaps="false"
         android:text="DialogView"/>
+    <Button
+        android:id="@+id/btn_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:background="@drawable/btn_login"
+        android:textAllCaps="false"
+        android:text="ToolBar"/>
+    <Button
+        android:id="@+id/btn_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:background="@drawable/btn_login"
+        android:textAllCaps="false"
+        android:text="计算器"/>
 </LinearLayout>

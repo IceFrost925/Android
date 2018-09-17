@@ -1,79 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DialogActivity">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="各中Dialog合集"/>
+        android:text="各中Dialog合集" />
 
     <Button
         android:id="@+id/btn_comm"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="普通Dialog"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_more"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="多按钮Dialog"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_list"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="列表Dialog"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_radio"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="单选Dialog"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
-  <Button
+    <Button
         android:id="@+id/btn_checked"
-      android:layout_weight="1"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="多选Dialog"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
-  <Button
+    <Button
         android:id="@+id/btn_progress2"
-      android:layout_weight="1"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="进度条Dialog"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
-  <Button
+    <Button
         android:id="@+id/btn_progress"
-      android:layout_weight="1"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="读取中Dialog"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
-  <Button
+    <Button
         android:id="@+id/btn_customer"
-      android:layout_weight="1"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="自定义Dialog"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="日期Dialog"
+        android:textSize="20sp" />
+
 
 </LinearLayout>
