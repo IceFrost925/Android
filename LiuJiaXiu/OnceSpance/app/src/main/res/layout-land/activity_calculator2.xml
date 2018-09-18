@@ -12,7 +12,7 @@
         android:background="#ff9900"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="2">
 
     </LinearLayout>
     <LinearLayout
@@ -30,10 +30,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TableRow>
-                    <Button />
-                    <Button />
-                    <Button />
+                <TableRow android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btn_7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/btn_8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/btn_9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
                 </TableRow>
 
                 <TableRow>
@@ -42,6 +54,11 @@
                     <Button />
                 </TableRow>
 
+                <TableRow>
+                    <Button />
+                    <Button />
+                    <Button />
+                </TableRow>
                 <TableRow>
                     <Button />
                     <Button />
@@ -54,11 +71,18 @@
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:background="#fff"
+            android:background="#ccc"
             android:layout_height="match_parent">
 
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#ddd"
+            android:layout_height="match_parent">
 
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

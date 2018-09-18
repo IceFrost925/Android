@@ -226,7 +226,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:text="*"
-                    android:background="#0084FF"
+                    android:background="@drawable/btn_other2_calculator"
                     android:textSize="30sp" />
 
                 <Button
@@ -235,7 +235,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:text="-"
-                    android:background="#0084FF"
+                    android:background="@drawable/btn_other2_calculator"
                     android:textSize="30sp" />
 
 
@@ -245,7 +245,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:text="+"
-                    android:background="#0084FF"
+                    android:background="@drawable/btn_other2_calculator"
                     android:textSize="30sp" />
 
                 <Button
@@ -253,7 +253,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2"
-                    android:background="#0084FF"
+                    android:background="@drawable/btn_other2_calculator"
                     android:text="="
                     android:textSize="30sp" />
             </LinearLayout>

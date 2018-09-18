@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/BtnHome"
+            android:text="@string/btnLogin"/>
+
+        <Button
+            android:id="@+id/btn_info"
+            style="@style/BtnHome"
+            android:text="@string/btnOnceInfo"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_2_1"
+            style="@style/BtnHome"
+            android:text="@string/passValue"/>
+        <Button
+            android:id="@+id/btn_2_2"
+            style="@style/BtnHome"
+            android:text="@string/passValue2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_3_1"
+            style="@style/BtnHome"
+            android:text="@string/passData"/>
+        <Button
+            android:id="@+id/btn_3_2"
+            style="@style/BtnHome"
+            android:text="@string/passObject"/>
+        <Button
+            android:id="@+id/btn_3_3"
+            style="@style/BtnHome"
+            android:text="@string/passObjectValue"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_4"
+            style="@style/BtnHome"
+            android:text="@string/passOther"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_5_1"
+            style="@style/BtnHome"
+            android:text="@string/phone"/>
+        <Button
+            android:id="@+id/btn_5_2"
+            style="@style/BtnHome"
+            android:text="@string/message"/>
+        <Button
+            android:id="@+id/btn_5_3"
+            style="@style/BtnHome"
+            android:text="@string/email"/>
+        <Button
+            android:id="@+id/btn_5_4"
+            style="@style/BtnHome"
+            android:text="@string/web"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_6_21"
+            style="@style/BtnHome"
+            android:text="@string/startAlarmClock"/>
+        <Button
+            android:id="@+id/btn_6_2"
+            style="@style/BtnHome"
+            android:text="@string/startTime"/>
+        <Button
+            android:id="@+id/btn_6_3"
+            style="@style/BtnHome"
+            android:text="@string/showClock"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_7"
+            style="@style/BtnHome"
+            android:text="@string/lifeCycle"/>
+    </LinearLayout>
+
+</LinearLayout>
