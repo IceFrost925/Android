@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.CityActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0084FF"
+        app:subtitleTextColor="#fff"
+        app:titleTextColor="#fff" />
+   <LinearLayout
+       android:paddingLeft="5dp"
+       android:paddingRight="5dp"
+       android:layout_marginTop="5dp"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <EditText
+           android:id="@+id/select_city_et"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="4"
+           android:inputType="text"
+           android:background="@drawable/et_username"
+           android:drawableLeft="@mipmap/search"
+           android:hint="搜索全国城市(中文)"
+           android:textSize="20sp" />
+       <Button
+           android:id="@+id/btn_city_query"
+           android:background="#0084FF"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:text="搜索"
+           android:textColor="#FFF"
+           android:textSize="20sp"/>
+   </LinearLayout>
+    <ListView
+        android:id="@+id/list_city"
+        android:entries="@array/week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+</LinearLayout>

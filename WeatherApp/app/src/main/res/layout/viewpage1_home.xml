@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:id="@+id/tv_date-1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6日星期四"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/biz_plugin_weather_qing" />
+
+        <TextView
+            android:id="@+id/tv_temp-1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22℃~29℃"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_statue-1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阴"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_wind-1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="风力3级"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_date-2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6日星期四"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/biz_plugin_weather_qing" />
+
+        <TextView
+            android:id="@+id/tv_temp-2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22℃~29℃"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_statue-2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阴"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_wind-2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="风力3级"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_date-3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6日星期四"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/biz_plugin_weather_qing" />
+
+        <TextView
+            android:id="@+id/tv_temp-3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22℃~29℃"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_statue-3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阴"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_wind-3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="风力3级"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>
