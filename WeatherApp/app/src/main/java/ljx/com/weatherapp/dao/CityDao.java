@@ -3,8 +3,6 @@ package ljx.com.weatherapp.dao;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
-
 import ljx.com.weatherapp.utils.DBHelper;
 
 public class CityDao {
@@ -24,9 +22,10 @@ public class CityDao {
                 null, null, null);
 //        Cursor cursor = db.rawQuery("select * from student", null);
         return  cursor;
+
     }
 
-    // 1. 查询所有的记录，给CursorAdapter使用
+    // 1. 查询某个城市
     public Cursor getFuzzyCursor(String city) {
         // 1. 获取SQLiteDatabse对象db
         SQLiteDatabase db = helper.getReadableDatabase();
@@ -40,3 +39,4 @@ public class CityDao {
         return  cursor;
     }
 }
+

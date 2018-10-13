@@ -1,5 +1,6 @@
 package ljx.com.weatherapp.Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private ViewPager viewPager;
     private LinearLayout dotLayout;
-
+    private LinearLayout weatherLayout;
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.view_page);
         //初始化toolbar
         initToolbar();
-        //初始化viewPage
+        //初始化viewPage控件
         initViewPage();
-
-
+        //初始化viewPage数据
+        initViewPageData();
         Intent intent = getIntent();
         int flag = intent.getIntExtra("flag", 1);
         switch (flag) {
@@ -49,6 +51,28 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, city_name + "-" + city_number, Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+
+    private void initViewPageData() {
+        LayoutInflater inflater = this.getLayoutInflater();
+        weatherLayout = findViewById(R.id.day_weather_layout);
+        ViewHolde dayView;
+        View view = null;
+        for (int i = 0;i< 3;i++){
+            view = inflater.inflate(R.layout.day_weather_info,null);
+            dayView = new ViewHolde();
+            dayView.textViewDate = findViewById(R.id.day_weather_date);
+            dayView.textViewTemp = findViewById(R.id.day_weather_temp);
+            dayView.textViewWind = findViewById(R.id.day_weather_wind);
+            dayView.textViewStatus = findViewById(R.id.day_weather_status);
+            //给viewHoder赋值
+            dayView.imageView.setImageResource(R.drawable.biz_plugin_weather_qing);
+            dayView.textViewTemp.setText("22℃~29℃");
+            dayView.textViewWind.setText("风力3级");
+            dayView.textViewStatus.setText("阴");
+            view.setTag(dayView);
+        }
+        weatherLayout.addView(view);
     }
 
     private void initViewPage() {
@@ -88,5 +112,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    class ViewHolde{
+        TextView textViewDate;
+        TextView textViewTemp;
+        TextView textViewStatus;
+        TextView textViewWind;
+        ImageView imageView;
     }
 }

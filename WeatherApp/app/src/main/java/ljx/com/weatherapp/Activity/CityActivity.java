@@ -6,19 +6,16 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import ljx.com.weatherapp.R;
 import ljx.com.weatherapp.adapter.CityAdapter;
 import ljx.com.weatherapp.dao.CityDao;
-import ljx.com.weatherapp.model.City;
 
 public class CityActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener, View.OnClickListener {
     private Toolbar toolbar;
