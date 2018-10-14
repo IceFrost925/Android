@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,18 +28,22 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private ViewPager viewPager;
     private LinearLayout dotLayout;
-    private LinearLayout weatherLayout;
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         viewPager = findViewById(R.id.view_page);
+
         //初始化toolbar
         initToolbar();
         //初始化viewPage控件
         initViewPage();
-        //初始化viewPage数据
-        initViewPageData();
+       //处理接受到的参数
+        getChooseCity();
+    }
+
+    private void getChooseCity() {
         Intent intent = getIntent();
         int flag = intent.getIntExtra("flag", 1);
         switch (flag) {
@@ -53,27 +58,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void initViewPageData() {
-        LayoutInflater inflater = this.getLayoutInflater();
-        weatherLayout = findViewById(R.id.day_weather_layout);
-        ViewHolde dayView;
-        View view = null;
-        for (int i = 0;i< 3;i++){
-            view = inflater.inflate(R.layout.day_weather_info,null);
-            dayView = new ViewHolde();
-            dayView.textViewDate = findViewById(R.id.day_weather_date);
-            dayView.textViewTemp = findViewById(R.id.day_weather_temp);
-            dayView.textViewWind = findViewById(R.id.day_weather_wind);
-            dayView.textViewStatus = findViewById(R.id.day_weather_status);
-            //给viewHoder赋值
-            dayView.imageView.setImageResource(R.drawable.biz_plugin_weather_qing);
-            dayView.textViewTemp.setText("22℃~29℃");
-            dayView.textViewWind.setText("风力3级");
-            dayView.textViewStatus.setText("阴");
-            view.setTag(dayView);
-        }
-        weatherLayout.addView(view);
-    }
 
     private void initViewPage() {
 
@@ -82,11 +66,15 @@ public class MainActivity extends AppCompatActivity {
         list.add(lf.inflate(R.layout.viewpage1_home, null));
         list.add(lf.inflate(R.layout.viewpage2_home, null));
 
-        MainPagerAdapter mainPageAdapter = new MainPagerAdapter(list);
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(R.layout.viewpage1_home);
+        list2.add(R.layout.viewpage2_home);
+
+        MainPagerAdapter mainPageAdapter = new MainPagerAdapter(MainActivity.this,list,list2);
         viewPager.setAdapter(mainPageAdapter);
+        mainPageAdapter.notifyDataSetChanged();
         dotLayout = findViewById(R.id.layout_point);
         viewPager.setOnPageChangeListener(new ViewPagerIndicator(this,viewPager,dotLayout,2));
-
     }
 
     private void initToolbar() {
@@ -113,11 +101,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    class ViewHolde{
-        TextView textViewDate;
-        TextView textViewTemp;
-        TextView textViewStatus;
-        TextView textViewWind;
-        ImageView imageView;
-    }
+
 }

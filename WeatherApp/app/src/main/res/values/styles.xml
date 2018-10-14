@@ -10,4 +10,24 @@
         <!--设置溢出的三个点的颜色-->
         <item name="colorControlNormal">@android:color/white</item>
     </style>
+
+    <style name="myLinearLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="myTextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="myImageView">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
 </resources>
