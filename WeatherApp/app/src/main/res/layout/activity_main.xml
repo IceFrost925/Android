@@ -43,7 +43,6 @@
                     android:id="@+id/show_city"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="南京"
                     android:textColor="#FFF"
                     android:textSize="40sp" />
 
@@ -51,14 +50,13 @@
                     android:id="@+id/update_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="20:21发布"
                     android:textColor="#FFF"
                     android:textSize="20sp" />
 
                 <TextView
+                    android:id="@+id/day_weather_hum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="湿度：68%"
                     android:textColor="#FFF"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -84,9 +82,9 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/day_weather_pm25"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="25"
                         android:textColor="#FFF"
                         android:textSize="40sp" />
                 </LinearLayout>
@@ -97,9 +95,9 @@
                     android:layout_marginLeft="10dp">
 
                     <ImageView
+                        android:id="@+id/top_img"
                         android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/biz_plugin_weather_0_50" />
+                        android:layout_height="80dp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -113,10 +111,10 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/day_weather_img"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/biz_plugin_weather_qing" />
+                android:layout_marginTop="10dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -128,7 +126,6 @@
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6日星期四"
                     android:textColor="#FFF"
                     android:textSize="18sp" />
 
@@ -136,7 +133,6 @@
                     android:id="@+id/tv_temp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="22℃~29℃"
                     android:textColor="#FFF"
                     android:textSize="18sp" />
 
@@ -144,7 +140,6 @@
                     android:id="@+id/tv_statue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="阴"
                     android:textColor="#FFF"
                     android:textSize="18sp" />
 
@@ -152,7 +147,6 @@
                     android:id="@+id/tv_wind"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="风力3级"
                     android:textColor="#FFF"
                     android:textSize="18sp" />
             </LinearLayout>

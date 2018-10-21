@@ -1,6 +1,7 @@
 package ljx.com.weatherapp.Activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -104,11 +105,10 @@ public class CityActivity extends AppCompatActivity implements AdapterView.OnIte
             Intent intent = new Intent(CityActivity.this,MainActivity.class);
             String number = cursor.getString(cursor.getColumnIndex("number"));
             String city = cursor.getString(cursor.getColumnIndex("city"));
-            intent.putExtra("flag",2);
-            Bundle bundle = new Bundle();
-            bundle.putString("city_number",number);
-            bundle.putString("cityName",city);
-            intent.putExtras(bundle);
+            SharedPreferences.Editor editor = getSharedPreferences("cityLocalPref",MODE_PRIVATE).edit();
+            editor.putString("cityName",city);
+            editor.putString("number",number);
+            editor.apply();
             startActivity(intent);
         }
     }
